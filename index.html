@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tesla Future</title>
+<title>Tesla Inspired Future</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
   <div class="logo">TESLA</div>
   <div>
@@ -19,6 +20,7 @@
   </div>
 </nav>
 
+<!-- HERO VIDEO -->
 <header class="hero-video">
   <video autoplay muted loop>
     <source src="https://cdn.coverr.co/videos/coverr-driving-through-the-desert-5176/1080p.mp4" type="video/mp4">
@@ -27,11 +29,53 @@
   <div class="overlay"></div>
 
   <div class="content">
-    <h1>Future of Mobility</h1>
-    <p>Electric. Intelligent. Sustainable.</p>
-    <a href="cars.html" class="btn">Explore Vehicles</a>
+    <h1>Future of Energy & Mobility</h1>
+    <p>Innovation. Sustainability. Intelligence.</p>
+
+    <button onclick="playSound()" class="btn">Enter Experience</button>
+    <audio id="welcomeSound">
+      <source src="https://www.soundjay.com/buttons/sounds/button-3.mp3">
+    </audio>
   </div>
 </header>
 
+<!-- TECH SECTION -->
+<section class="section">
+  <h2>Technology</h2>
+  <p>Advanced engineering meets intelligent systems to power the future.</p>
+</section>
+
+<!-- DEVICE INFO -->
+<section class="section">
+  <h2>System Access</h2>
+  <p id="deviceInfo"></p>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <h2>What People Say</h2>
+
+  <div class="testimonial-box">
+    <p>"A truly futuristic experience. Smooth and powerful."</p>
+    <h4>- Alex R.</h4>
+  </div>
+
+  <div class="testimonial-box">
+    <p>"Feels like interacting with next-generation technology."</p>
+    <h4>- Jordan M.</h4>
+  </div>
+
+  <div class="testimonial-box">
+    <p>"Clean design, powerful concept, very impressive."</p>
+    <h4>- Sarah K.</h4>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2003 Tesla Ins. All rights reserved.
+</footer>
+
+<script src="script.js"></script>
 </body>
-</html>
+  </html>
