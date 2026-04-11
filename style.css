@@ -110,3 +110,51 @@ button {
   border: none;
   cursor: pointer;
 }
+.section {
+  padding: 80px 30px;
+  text-align: center;
+}
+
+.testimonials {
+  padding: 80px 30px;
+  text-align: center;
+}
+
+.testimonial-box {
+  background: #111;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #111;
+  font-size: 12px;
+}
+.section {
+  padding: 80px 30px;
+  text-align: center;
+}
+
+.testimonials {
+  padding: 80px 30px;
+  text-align: center;
+}
+
+.testimonial-box {
+  background: #111;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  background: #111;
+  font-size: 12px;
+}
