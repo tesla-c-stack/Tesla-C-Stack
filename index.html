@@ -27,6 +27,34 @@
   window.addDoc = addDoc;
   window.collection = collection;
     </script>
+  
+  <script type="module">
+  const form = document.getElementById("contactForm");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = form.name.value;
+    const email = form.email.value;
+    const message = form.message.value;
+
+    try {
+      await window.addDoc(window.collection(window.db, "messages"), {
+        name,
+        email,
+        message,
+        time: new Date()
+      });
+
+      alert("Message sent successfully!");
+      form.reset();
+
+    } catch (error) {
+      alert("Error sending message");
+      console.log(error);
+    }
+  });
+  </script>
 
 <body>
 
