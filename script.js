@@ -8,3 +8,6 @@ function detectDevice() {
 }
 
 detectDevice();
+document.querySelector(".contact-form")?.addEventListener("submit", function() {
+  alert("Sending your message...");
+}
