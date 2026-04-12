@@ -56,7 +56,8 @@
   // Make database available globally
   window.db = db;
 </script>
-  const form = document.getElementById("contactForm");
+  
+</const form = document.getElementById("contactForm");
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -81,6 +82,41 @@
       console.log(error);
     }
   });
+  </script>
+  
+  <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDg_EsUottXwuGbFm14kWq2IoPhyL9sY3c",
+    authDomain: "tesla-site-a7783.firebaseapp.com",
+    projectId: "tesla-site-a7783",
+    storageBucket: "tesla-site-a7783.firebasestorage.app",
+    messagingSenderId: "924112398481",
+    appId: "1:924112398481:web:0a811ef5ef483c39c63730",
+    measurementId: "G-HC7YNZ8ETE"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  async function testWrite() {
+    try {
+      await addDoc(collection(db, "messages"), {
+        name: "Test User",
+        email: "test@example.com",
+        message: "Firebase is working!",
+        time: new Date()
+      });
+
+      console.log("✅ Firebase write successful");
+    } catch (error) {
+      console.log("❌ Firebase error:", error);
+    }
+  }
+
+  testWrite();
   </script>
 
 <body>
