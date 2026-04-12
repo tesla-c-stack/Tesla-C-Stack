@@ -13,15 +13,16 @@ body {
 /* NAV */
 nav {
   position: fixed;
+  top: 0
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 15px 40px;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
   z-index: 1000;
 }
 
+body {
+  padding-top: 80px; /* pushes content below navbar */
+}
 nav a {
   color: white;
   margin: 0 12px;
