@@ -1,215 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VoltEdge Energy</title>
-
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: black;
-      color: white;
-    }
-
-    /* NAVBAR */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      padding: 15px;
-      background: rgba(0,0,0,0.6);
-      z-index: 1000;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    /* SECTIONS */
-    section {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-      opacity: 0;
-      transform: translateY(40px);
-      transition: 0.6s ease;
-    }
-
-    /* HERO */
-    .hero {
-      background: url('https://images.unsplash.com/photo-1509395176047-4a66953fd231') no-repeat center/cover;
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .section {
-      background: #111;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin: 10px 0;
-    }
-
-    h2 {
-      font-size: 2rem;
-    }
-
-    p {
-      color: #ccc;
-      max-width: 600px;
-    }
-
-    .btn {
-      padding: 12px 30px;
-      background: white;
-      color: black;
-      border-radius: 30px;
-      text-decoration: none;
-      margin-top: 20px;
-      border: none;
-      cursor: pointer;
-    }
-
-    /* FORM */
-    form {
-      display: flex;
-      flex-direction: column;
-      width: 90%;
-      max-width: 400px;
-      gap: 15px;
-    }
-
-    input, textarea {
-      padding: 12px;
-      border-radius: 10px;
-      border: none;
-      outline: none;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #000;
-      font-size: 14px;
-      color: #777;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla | Future of Energy</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<nav>
-  <a href="#home">Home</a>
-  <a href="#vehicles">Vehicles</a>
-  <a href="#energy">Energy</a>
-  <a href="#solar">Solar</a>
-  <a href="#about">About</a>
-  <a href="#contact">Contact</a>
-</nav>
+    <!-- Top Navigation -->
+    <header>
+        <nav>
+            <div class="logo">TESLA</div>
+            <ul>
+                <li><a href="cars.html">Vehicles</a></li>
+                <li><a href="energy.html">Energy</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <h1>VoltEdge Energy</h1>
-  <p>Powering the Future with Clean Technology</p>
-  <a href="#contact" class="btn">Get Started</a>
-</section>
+    <!-- Hero Section - Future of Energy -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Future of Energy</h1>
+            <p>Clean. Smart. Unlimited possibilities.</p>
+            <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+                Contact Us
+            </button>
+        </div>
+    </section>
 
-<!-- VEHICLES -->
-<section class="section" id="vehicles">
-  <h2>Electric Vehicles</h2>
-  <p>High performance sustainable transport built for the future.</p>
-</section>
+    <!-- Electric Vehicles Section -->
+    <section class="section" id="vehicles">
+        <div class="content">
+            <h1>Electric Vehicles</h1>
+            <p>High performance sustainable transport.</p>
+            <a href="cars.html" class="btn">Explore Vehicles</a>
+        </div>
+    </section>
 
-<!-- ENERGY -->
-<section class="section" id="energy">
-  <h2>Energy Storage</h2>
-  <p>Reliable and scalable power solutions for homes and industries.</p>
-</section>
+    <!-- Energy Storage Section -->
+    <section class="section" id="energy-storage">
+        <div class="content">
+            <h1>Energy Storage</h1>
+            <p>Reliable power for homes & industries.</p>
+            <a href="energy.html" class="btn">Learn More</a>
+        </div>
+    </section>
 
-<!-- SOLAR -->
-<section class="section" id="solar">
-  <h2>Solar Technology</h2>
-  <p>Harnessing solar energy for a cleaner and smarter world.</p>
-</section>
+    <!-- Solar Technology Section -->
+    <section class="section" id="solar">
+        <div class="content">
+            <h1>Solar Technology</h1>
+            <p>Harvesting the power of the sun.</p>
+            <a href="energy.html" class="btn">Discover Solar</a>
+        </div>
+    </section>
 
-<!-- ABOUT -->
-<section class="section" id="about">
-  <h2>About Us</h2>
-  <p>
-    VoltEdge Energy is a clean energy company focused on advancing
-    sustainable solutions through electric mobility, solar innovation,
-    and intelligent power systems.
-  </p>
-</section>
+    <!-- Contact Us Section -->
+    <section class="section contact-section" id="contact">
+        <div class="content">
+            <h1>Contact Us</h1>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
 
-<!-- MISSION -->
-<section class="section">
-  <h2>Our Mission</h2>
-  <p>
-    To accelerate the global transition to renewable energy by
-    delivering cutting-edge technology and sustainable infrastructure.
-  </p>
-</section>
+    <footer>
+        <p>&copy; 2005 Future Energy Project - Educational Tesla Clone</p>
+        <p>Not affiliated with Tesla, Inc.</p>
+    </footer>
 
-<!-- CONTACT -->
-<section class="section" id="contact">
-  <h2>Contact Us</h2>
-
-  <form action="https://formspree.io/f/mjgpnajz" method="POST">
-
-    <input type="hidden" name="_subject" value="New Message from VoltEdge Website">
-    <input type="hidden" name="_next" value="https://c-stack.github.io/#contact">
-    <input type="text" name="_honey" style="display:none">
-
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-
-    <button type="submit" class="btn">Send Message</button>
-
-  </form>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <p>© 2005 VoltEdge Energy</p>
-  <p>Email: elonreevesmuskextopfans@fnail.com</p>
-</footer>
-
-<!-- ANIMATION SCRIPT -->
-<script>
-  const sections = document.querySelectorAll("section");
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  });
-
-  sections.forEach(section => {
-    observer.observe(section);
-  });
-</script>
-
+    <script src="script.js"></script>
 </body>
-    </html>
+  </html>
