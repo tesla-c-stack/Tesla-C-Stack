@@ -1,72 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin Dashboard</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Dashboard | Energy & Vehicle Status</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="dashboard">
+    <header>
+        <nav>
+            <div class="logo">TESLA</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cars.html">Vehicles</a></li>
+                <li><a href="energy.html">Energy</a></li>
+                <li><a href="store.html">Shop</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
-  <!-- SIDEBAR -->
-  <div class="sidebar">
-    <h2>ADMIN</h2>
-    <a href="#">Dashboard</a>
-    <a href="#">Messages</a>
-    <a href="#">Users</a>
-    <a href="#">Settings</a>
-  </div>
+    <section class="hero" style="background-image: url('https://picsum.photos/id/870/1920/1080'); min-height: 70vh;">
+        <div class="hero-content">
+            <h1>Dashboard</h1>
+            <p>Real-time overview of your Tesla energy and vehicles</p>
+        </div>
+    </section>
 
-  <!-- MAIN -->
-  <div class="main">
+    <section class="dashboard-grid">
+        <div class="dashboard-card">
+            <h2>Powerwall Status</h2>
+            <div class="status">92% Charged</div>
+            <p>Energy stored: 12.8 kWh</p>
+            <p>Powering home: 1.2 kW</p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 92%"></div>
+            </div>
+        </div>
 
-    <h1>Dashboard Overview</h1>
+        <div class="dashboard-card">
+            <h2>Vehicle Status</h2>
+            <div class="status">Model Y • Online</div>
+            <p>Battery: 78%</p>
+            <p>Range: 248 miles</p>
+            <p>Parked at: Home</p>
+        </div>
 
-    <!-- STATS -->
-    <div class="stats">
+        <div class="dashboard-card">
+            <h2>Solar Production</h2>
+            <div class="status">Today: 18.4 kWh</div>
+            <p>Peak output: 6.2 kW</p>
+            <p>This month: 412 kWh</p>
+        </div>
 
-      <div class="card">
-        <h3>Users</h3>
-        <p>1,204</p>
-      </div>
+        <div class="dashboard-card">
+            <h2>Energy Usage</h2>
+            <div class="status">Home usage: 4.1 kW</div>
+            <p>From grid: 0.8 kW</p>
+            <p>From solar: 3.3 kW</p>
+        </div>
+    </section>
 
-      <div class="card">
-        <h3>Messages</h3>
-        <p>8500</p>
-      </div>
+    <footer>
+        <p>2005 Future Energy Project Tesla-Inspired Website</p>
+        <p>This is affiliated with Tesla, Inc.</p>
+    </footer>
 
-      <div class="card">
-        <h3>Transactions</h3>
-        <p>$4,600,000,000</p>
-      </div>
-
-    </div>
-
-    <!-- MESSAGES -->
-    <div class="messages">
-
-      <h2>Recent Messages</h2>
-
-      <div class="card">
-        <p><strong>John:</strong> Interested in Model S</p>
-      </div>
-
-      <div class="card">
-        <p><strong>Mary:</strong> Need pricing details</p>
-      </div>
-
-      <div class="card">
-        <p><strong>Alex:</strong> Partnership inquiry</p>
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-
+    <script src="script.js"></script>
 </body>
 </html>
