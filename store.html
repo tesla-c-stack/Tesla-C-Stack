@@ -1,43 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Configurator</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Shop | Merchandise & Accessories</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<nav>
-  <div class="logo">TESLA</div>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="cars.html">Vehicles</a>
-    <a href="energy.html">Energy</a>
-    <a href="store.html">Store</a>
-  </div>
-</nav>
+    <header>
+        <nav>
+            <div class="logo">TESLA</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cars.html">Vehicles</a></li>
+                <li><a href="energy.html">Energy</a></li>
+                <li><a href="store.html">Shop</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
-<section class="grid">
+    <section class="hero" style="background-image: url('https://picsum.photos/id/106/1920/1080');">
+        <div class="hero-content">
+            <h1>Tesla Shop</h1>
+            <p>Official Tesla merchandise and vehicle accessories.</p>
+        </div>
+    </section>
 
-  <div class="card">
+    <section class="store-grid">
+        <div class="store-card">
+            <img src="https://picsum.photos/id/180/600/400" alt="Tesla Cybertruck Hoodie">
+            <div class="store-info">
+                <h2>Cybertruck Hoodie</h2>
+                <p>Premium black hoodie with Cybertruck graphic. Limited edition.</p>
+                <p class="price">$95</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </div>
 
-    <h2 id="carName">Model S</h2>
-    <p>$<span id="price">89990</span></p>
+        <div class="store-card">
+            <img src="https://picsum.photos/id/201/600/400" alt="Tesla Model Y Keychain">
+            <div class="store-info">
+                <h2>Model Y Keychain</h2>
+                <p>High-quality metal keychain featuring the Model Y silhouette.</p>
+                <p class="price">$28</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </div>
 
-    <img id="carImg" src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80">
+        <div class="store-card">
+            <img src="https://picsum.photos/id/237/600/400" alt="Tesla Cap">
+            <div class="store-info">
+                <h2>Tesla Cap</h2>
+                <p>Classic black cap with embroidered Tesla logo. One size fits most.</p>
+                <p class="price">$35</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </div>
 
-    <h3>Select Model</h3>
-    <button onclick="setCar('Model S',89990,'https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80')">Model S</button>
-    <button onclick="setCar('Model 3',42990,'https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=800&q=80')">Model 3</button>
+        <div class="store-card">
+            <img src="https://picsum.photos/id/133/600/400" alt="Tesla Solar Roof Mug">
+            <div class="store-info">
+                <h2>Solar Roof Mug</h2>
+                <p>Ceramic mug with solar roof design. Perfect for your morning coffee.</p>
+                <p class="price">$25</p>
+                <a href="#" class="btn">Add to Cart</a>
+            </div>
+        </div>
+    </section>
 
-    <h3>Select Color</h3>
-    <button onclick="changeColor(0)">White</button>
-    <button onclick="changeColor(1)">Black</button>
+    <footer>
+        <p> 2005 Future Energy Project Tesla-Inspired Website</p>
+        <p>This is affiliated with Tesla, Inc.</p>
+    </footer>
 
-  </div>
-
-</section>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
