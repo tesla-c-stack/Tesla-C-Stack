@@ -1,43 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Vehicles</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Vehicles | Cybertruck, Model Y, Model 3</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<nav>
-  <div class="logo">TESLA</div>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="cars.html">Vehicles</a>
-    <a href="energy.html">Energy</a>
-    <a href="store.html">Store</a>
-  </div>
-</nav>
+    <header>
+        <nav>
+            <div class="logo">TESLA</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cars.html">Vehicles</a></li>
+                <li><a href="energy.html">Energy</a></li>
+                <li><a href="store.html">Shop</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
-<section class="grid">
+    <section class="hero" style="background-image: url('https://picsum.photos/id/1015/1920/1080');">
+        <div class="hero-content">
+            <h1>Electric Vehicles</h1>
+            <p>Performance. Safety. Sustainability.</p>
+        </div>
+    </section>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?auto=format&fit=crop&w=800&q=80">
-    <h2>Model S</h2>
-    <p>Luxury performance sedan</p>
-  </div>
+    <section class="vehicles-grid">
+        <div class="vehicle-card">
+            <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/cybertruck-hero-desktop.jpg" alt="Tesla Cybertruck">
+            <div class="vehicle-info">
+                <h2>Cybertruck</h2>
+                <p>Ultra-hard stainless steel exoskeleton. The future of trucks is here.</p>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+        </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=800&q=80">
-    <h2>Model 3</h2>
-    <p>Efficiency meets performance</p>
-  </div>
+        <div class="vehicle-card">
+            <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/modely-hero-desktop.jpg" alt="Tesla Model Y">
+            <div class="vehicle-info">
+                <h2>Model Y</h2>
+                <p>The best-selling electric SUV in the world.</p>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+        </div>
 
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80">
-    <h2>Model X</h2>
-    <p>Premium SUV innovation</p>
-  </div>
+        <div class="vehicle-card">
+            <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/model3-hero-desktop.jpg" alt="Tesla Model 3">
+            <div class="vehicle-info">
+                <h2>Model 3</h2>
+                <p>High performance electric sedan with class-leading range.</p>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+        </div>
+    </section>
 
-</section>
+    <footer>
+        <p>&copy; 2005 Future Energy Project Tesla-Inspired Website</p>
+        <p>This is Tesla affiliated Inc.</p>
+    </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
