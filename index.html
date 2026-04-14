@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tesla | Future of Energy</title>
+    <title>Tesla | Electric Vehicles, Energy & Solar</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Top Navigation -->
     <header>
         <nav>
             <div class="logo">TESLA</div>
-            <ul>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="cars.html">Vehicles</a></li>
                 <li><a href="energy.html">Energy</a></li>
-                <li><a href="store.html">Store</a></li>
+                <li><a href="store.html">Shop</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
-    <!-- Hero Section - Future of Energy -->
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>Future of Energy</h1>
             <p>Clean. Smart. Unlimited possibilities.</p>
-            <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
-                Contact Us
-            </button>
+            <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Contact Us</button>
         </div>
     </section>
 
-    <!-- Electric Vehicles Section -->
     <section class="section" id="vehicles">
         <div class="content">
             <h1>Electric Vehicles</h1>
@@ -41,7 +42,6 @@
         </div>
     </section>
 
-    <!-- Energy Storage Section -->
     <section class="section" id="energy-storage">
         <div class="content">
             <h1>Energy Storage</h1>
@@ -50,7 +50,6 @@
         </div>
     </section>
 
-    <!-- Solar Technology Section -->
     <section class="section" id="solar">
         <div class="content">
             <h1>Solar Technology</h1>
@@ -59,7 +58,6 @@
         </div>
     </section>
 
-    <!-- Contact Us Section -->
     <section class="section contact-section" id="contact">
         <div class="content">
             <h1>Contact Us</h1>
@@ -73,10 +71,10 @@
     </section>
 
     <footer>
-        <p>&copy; 2005 Future Energy Project -Tesla Inc</p>
-        <p>Not affiliated with Tesla, Inc.</p>
+        <p>&copy; 2005 Future Energy Project — Tesla-Inspired Website</p>
+        <p>This is an affiliated with Tesla, Inc.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-  </html>
+</html>
