@@ -3,217 +3,238 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tesla Inspired Future</title>
-<link rel="stylesheet" href="style.css">
+<title>Future Energy & Mobility</title>
+
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background:#000;
+  color:#fff;
+}
+
+/* NAVBAR */
+nav {
+  display:flex;
+  justify-content:space-between;
+  padding:15px 30px;
+  border-bottom:1px solid #222;
+}
+
+nav .logo {
+  font-weight:bold;
+  letter-spacing:2px;
+}
+
+nav .links {
+  display:flex;
+  gap:20px;
+}
+
+nav .links div {
+  cursor:pointer;
+}
+
+/* HERO */
+.hero {
+  height:90vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.hero h1 {
+  font-size:50px;
+}
+
+.hero p {
+  margin-top:10px;
+  color:#aaa;
+}
+
+.hero button {
+  margin-top:20px;
+  padding:12px 30px;
+  border:none;
+  border-radius:25px;
+  background:#fff;
+  color:#000;
+  cursor:pointer;
+}
+
+/* FEATURES */
+.features {
+  padding:60px 20px;
+  text-align:center;
+}
+
+.features h2 {
+  margin-bottom:30px;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:20px;
+}
+
+.card {
+  background:#111;
+  padding:20px;
+  border-radius:10px;
+}
+
+/* CONTACT */
+.contact {
+  padding:60px 20px;
+  text-align:center;
+}
+
+input, textarea {
+  width:90%;
+  max-width:400px;
+  padding:12px;
+  margin:10px;
+  border:none;
+  border-radius:6px;
+}
+
+button.submit {
+  padding:12px 30px;
+  border:none;
+  border-radius:25px;
+  background:#fff;
+  color:#000;
+  cursor:pointer;
+}
+
+#status {
+  margin-top:10px;
+}
+
+/* FOOTER */
+footer {
+  background:#111;
+  padding:20px;
+  text-align:center;
+  font-size:13px;
+}
+</style>
 </head>
-  <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-
-  const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_PROJECT.firebaseapp.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT.appspot.com",
-    messagingSenderId: "XXXX",
-    appId: "XXXX"
-  };
-    
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
-  // make globally accessible
-  window.db = db;
-  window.addDoc = addDoc;
-  window.collection = collection;
-    </script>
-  
-  <script type="module">
-    
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
-  import { getFirestore } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyDg_EsUottXwuGbFm14kWq2IoPhyL9sY3c",
-    authDomain: "tesla-site-a7783.firebaseapp.com",
-    projectId: "tesla-site-a7783",
-    storageBucket: "tesla-site-a7783.firebasestorage.app",
-    messagingSenderId: "924112398481",
-    appId: "1:924112398481:web:0a811ef5ef483c39c63730",
-    measurementId: "G-HC7YNZ8ETE"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-
-  // Optional analytics
-  const analytics = getAnalytics(app);
-
-  // Firestore database
-  const db = getFirestore(app);
-
-  // Make database available globally
-  window.db = db;
-</script>
-  
-</const form = document.getElementById("contactForm");
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-
-    const name = form.name.value;
-    const email = form.email.value;
-    const message = form.message.value;
-
-    try {
-      await window.addDoc(window.collection(window.db, "messages"), {
-        name,
-        email,
-        message,
-        time: new Date()
-      });
-
-      alert("Message sent successfully!");
-      form.reset();
-
-    } catch (error) {
-      alert("Error sending message");
-      console.log(error);
-    }
-  });
-  </script>
-  
-  <script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyDg_EsUottXwuGbFm14kWq2IoPhyL9sY3c",
-    authDomain: "tesla-site-a7783.firebaseapp.com",
-    projectId: "tesla-site-a7783",
-    storageBucket: "tesla-site-a7783.firebasestorage.app",
-    messagingSenderId: "924112398481",
-    appId: "1:924112398481:web:0a811ef5ef483c39c63730",
-    measurementId: "G-HC7YNZ8ETE"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
-  async function testWrite() {
-    try {
-      await addDoc(collection(db, "messages"), {
-        name: "Test User",
-        email: "test@example.com",
-        message: "Firebase is working!",
-        time: new Date()
-      });
-
-      console.log("✅ Firebase write successful");
-    } catch (error) {
-      console.log("❌ Firebase error:", error);
-    }
-  }
-
-  testWrite();
-  </script>
 
 <body>
 
 <!-- NAV -->
 <nav>
   <div class="logo">TESLA</div>
-  <div>
-    <a href="index.html">Home</a>
-    <a href="cars.html">Vehicles</a>
-    <a href="energy.html">Energy</a>
-    <a href="dashboard.html">Dashboard</a>
-    <a href="store.html">Store</a>
+  <div class="links">
+    <div>Home</div>
+    <div>Vehicles</div>
+    <div>Energy</div>
+    <div>Store</div>
   </div>
 </nav>
 
-<!-- HERO VIDEO -->
-<header class="hero-video">
-  <video autoplay muted loop>
-    <source src="https://cdn.coverr.co/videos/coverr-driving-through-the-desert-5176/1080p.mp4" type="video/mp4">
-  </video>
-
-  <div class="overlay"></div>
-
-  <div class="content">
-    <h1>Future of Energy & Mobility</h1>
-    <p>Innovation. Sustainability. Intelligence.</p>
-
-    <button onclick="playSound()" class="btn">Enter Experience</button>
-    <audio id="welcomeSound">
-      <source src="https://www.soundjay.com/buttons/sounds/button-3.mp3">
-    </audio>
-  </div>
-</header>
-
-<!-- TECH SECTION -->
-<section class="section">
-  <h2>Technology</h2>
-  <p>Advanced engineering meets intelligent systems to power the future.</p>
+<!-- HERO -->
+<section class="hero">
+  <h1>Future of Energy</h1>
+  <p>Clean. Smart. Unlimited possibilities.</p>
+  <button onclick="scrollToContact()">Contact Us</button>
 </section>
 
-<!-- DEVICE INFO -->
-<section class="section">
-  <h2>System Access</h2>
-  <p id="deviceInfo"></p>
+<!-- FEATURES -->
+<section class="features">
+  <h2>Our Innovations</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Electric Vehicles</h3>
+      <p>High performance sustainable transport.</p>
+    </div>
+
+    <div class="card">
+      <h3>Energy Storage</h3>
+      <p>Reliable power for homes & industries.</p>
+    </div>
+
+    <div class="card">
+      <h3>Solar Technology</h3>
+      <p>Harnessing the power of the sun.</p>
+    </div>
+  </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="testimonials">
-  <h2>What People Say</h2>
-
-  <div class="testimonial-box">
-    <p>"A truly futuristic experience. Smooth and powerful."</p>
-    <h4>- Alex R.</h4>
-  </div>
-
-  <div class="testimonial-box">
-    <p>"Feels like interacting with next-generation technology."</p>
-    <h4>- Jordan M.</h4>
-  </div>
-
-  <div class="testimonial-box">
-    <p>"Clean design, powerful concept, very impressive."</p>
-    <h4>- Sarah K.</h4>
-  </div>
-<section class="section">
+<!-- CONTACT -->
+<section class="contact" id="contact">
   <h2>Contact Us</h2>
 
-  <form action="https://formspree.io/f/mjgpnajz" method="POST" class="contact-form"
-  id="contactForm">
-  
-  
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder=">
-    <textarea name="message" placeholder="Your Message" rows="5"></textarea>
-
-    <button type="submit">Send Message</button>
-
-  <p style="color:#aaa;">
-    
-  Contact our support team for inquiries, assistance, or partnership opportunities.
-</p>
-
-<p style="color:#aaa;">
-  Email: elonmuskonlytopfan@gmail.com
-      </p>
-  
-  </p>
-    
+  <form id="contactForm">
+    <input type="text" id="name" placeholder="Your Name" required><br>
+    <input type="email" id="email" placeholder="Your Email" required><br>
+    <textarea id="message" placeholder="Your Message" required></textarea><br>
+    <button class="submit" type="submit">Send Message</button>
   </form>
+
+  <p id="status"></p>
 </section>
 
 <!-- FOOTER -->
 <footer>
-© 2003 Tesla Ins. All rights reserved
+  © 2026 Future Energy Project
 </footer>
 
-<script src="script.js"></script>
+<!-- SCRIPT -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+/* ✅ YOUR REAL FIREBASE CONFIG (ALREADY FILLED) */
+const firebaseConfig = {
+  apiKey: "AIzaSyDg_EsUottXwuGbFm14kWq2IoPhyL9sY3c",
+  authDomain: "tesla-site-a7783.firebaseapp.com",
+  projectId: "tesla-site-a7783",
+  storageBucket: "tesla-site-a7783.firebasestorage.app",
+  messagingSenderId: "924112398481",
+  appId: "1:924112398481:web:0a811ef5ef483c39c63730",
+  measurementId: "G-HC7YNZ8ETE"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+/* FORM */
+const form = document.getElementById("contactForm");
+const status = document.getElementById("status");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  try {
+    await addDoc(collection(db, "messages"), {
+      name, email, message, time: new Date()
+    });
+
+    status.innerText = "✅ Message sent!";
+    form.reset();
+
+  } catch (err) {
+    status.innerText = "❌ Error sending message";
+    console.error(err);
+  }
+});
+
+/* SCROLL */
+window.scrollToContact = () => {
+  document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+};
+</script>
+
 </body>
-</html>
+  </html>
