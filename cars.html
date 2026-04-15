@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tesla Vehicles | Cybertruck, Model Y, Model 3</title>
+    <title>Tesla Vehicles</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,7 +17,6 @@
                 <li><a href="energy.html">Energy</a></li>
                 <li><a href="store.html">Shop</a></li>
                 <li><a href="dashboard.html">Dashboard</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
@@ -27,45 +26,123 @@
         </nav>
     </header>
 
-    <section class="hero" style="background-image: url('https://picsum.photos/id/1015/1920/1080');">
-        <div class="hero-content">
-            <h1>Electric Vehicles</h1>
-            <p>Performance. Safety. Sustainability.</p>
+    <!-- Advanced Configurator -->
+    <section class="configurator" id="configurator">
+        <div class="configurator-content">
+            <h1>Build Your Tesla</h1>
+            <div class="preview">
+                <img id="car-preview" src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/model3-hero-desktop.jpg" alt="Tesla Model 3">
+            </div>
+
+            <div class="options">
+                <h3>Model</h3>
+                <button onclick="selectModel('model3')">Model 3</button>
+                <button onclick="selectModel('modely')">Model Y</button>
+                <button onclick="selectModel('cybertruck')">Cybertruck</button>
+                <button onclick="selectModel('roadster')">Roadster</button>
+                <button onclick="selectModel('models')">Model S Plaid</button>
+                <button onclick="selectModel('modelx')">Model X Plaid</button>
+            </div>
+
+            <div class="options">
+                <h3>Exterior Color</h3>
+                <button onclick="changeExterior('red')">Red</button>
+                <button onclick="changeExterior('white')">White</button>
+                <button onclick="changeExterior('black')">Black</button>
+                <button onclick="changeExterior('blue')">Blue</button>
+            </div>
+
+            <div class="options">
+                <h3>Wheels</h3>
+                <button onclick="changeWheels(19)">19" Sport</button>
+                <button onclick="changeWheels(20)">20" Induction</button>
+                <button onclick="changeWheels(21)">21" Überturbine</button>
+            </div>
+
+            <div class="options">
+                <h3>Estimated Range & Price</h3>
+                <p id="range-display" style="font-size: 1.8rem; font-weight: 700; color: #0f0;">320 miles</p>
+                <p id="price-display" style="font-size: 1.6rem; font-weight: 600; color: #ddd;">Starting at $44,990</p>
+            </div>
+
+            <div class="options">
+                <h3>Interior</h3>
+                <button onclick="changeInterior('black')">All Black</button>
+                <button onclick="changeInterior('white')">White</button>
+            </div>
+
+            <a href="#" class="btn">Order Now</a>
         </div>
     </section>
 
-    <section class="vehicles-grid">
-        <div class="vehicle-card">
-            <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/cybertruck-hero-desktop.jpg" alt="Tesla Cybertruck">
-            <div class="vehicle-info">
-                <h2>Cybertruck</h2>
-                <p>Ultra-hard stainless steel exoskeleton. The future of trucks is here.</p>
-                <a href="#" class="btn">Order Now</a>
+    <!-- Expanded FSD v14 -->
+    <section class="section" style="background-image: url('https://picsum.photos/id/1018/1920/1080');">
+        <div class="content">
+            <h1>Full Self-Driving (Supervised) v14</h1>
+            <p>A major leap in smoothness and capability over v13.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 40px 0;">
+                <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/FSD-Visualization-Desktop" alt="FSD Visualization" style="width: 45%; max-width: 500px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
+                <img src="https://picsum.photos/id/870/600/400" alt="FSD Driving" style="width: 45%; max-width: 500px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
             </div>
+            <div style="max-width: 800px; margin: 40px auto; text-align: left; font-size: 1.25rem; line-height: 1.7;">
+                <p><strong>v14 vs v13 Key Differences:</strong></p>
+                <ul style="list-style: none; padding: 0;">
+                    <li>• New Speed Profiles and Arrival Options</li>
+                    <li>• 20% faster reaction time via rewritten AI compiler</li>
+                    <li>• Superior handling of emergency vehicles, unprotected turns, traffic circles, and rare scenarios</li>
+                    <li>• Improved parking consistency and point-to-point navigation</li>
+                    <li>• Smoother acceleration and reduced phantom braking</li>
+                </ul>
+            </div>
+            <a href="#" class="btn">Learn More About FSD v14</a>
         </div>
+    </section>
 
-        <div class="vehicle-card">
-            <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/modely-hero-desktop.jpg" alt="Tesla Model Y">
-            <div class="vehicle-info">
-                <h2>Model Y</h2>
-                <p>The best-selling electric SUV in the world.</p>
-                <a href="#" class="btn">Order Now</a>
+    <!-- Enhanced Optimus Gen 3 Section -->
+    <section class="section" style="background-image: url('https://picsum.photos/id/133/1920/1080');">
+        <div class="content">
+            <h1>Optimus Gen 3</h1>
+            <p>Tesla's general purpose humanoid robot — designed to perform useful work in the real world.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 40px 0;">
+                <img src="https://picsum.photos/id/201/600/400" alt="Optimus Robot" style="width: 45%; max-width: 500px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
+                <img src="https://picsum.photos/id/870/600/400" alt="Optimus in Action" style="width: 45%; max-width: 500px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
             </div>
+            <div style="max-width: 720px; margin: 40px auto; text-align: left; font-size: 1.25rem; line-height: 1.7;">
+                <p><strong>Optimus Gen 3 Highlights:</strong></p>
+                <ul style="list-style: none; padding: 0;">
+                    <li>• Height: 5'8" (168 cm) | Weight: ~125 lbs (57 kg)</li>
+                    <li>• Advanced hands with 22+ degrees of freedom for human-level dexterity</li>
+                    <li>• Walking speed up to 5-8 mph with improved multi-layer foot design</li>
+                    <li>• Payload capacity ~45 lbs; uses Tesla FSD-adapted neural networks for manipulation and navigation</li>
+                    <li>• Safe force-limited actuators for human collaboration</li>
+                    <li>• First factory deployment targeted for 2005, followed by home assistance</li>
+                </ul>
+            </div>
+            <a href="#" class="btn">Learn About Optimus Gen 3</a>
         </div>
+    </section>
 
-        <div class="vehicle-card">
-            <img src="https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/model3-hero-desktop.jpg" alt="Tesla Model 3">
-            <div class="vehicle-info">
-                <h2>Model 3</h2>
-                <p>High performance electric sedan with class-leading range.</p>
-                <a href="#" class="btn">Order Now</a>
+    <!-- Tesla Dojo Supercomputer (enhanced with exaflop explanation) -->
+    <section class="section" style="background-image: url('https://picsum.photos/id/1015/1920/1080');">
+        <div class="content">
+            <h1>Tesla Dojo Supercomputer</h1>
+            <p>The custom-built AI training supercomputer powering FSD and Optimus.</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin: 40px 0;">
+                <img src="https://picsum.photos/id/1018/600/400" alt="Dojo Supercomputer" style="width: 45%; max-width: 500px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
+                <img src="https://picsum.photos/id/870/600/400" alt="Dojo Training" style="width: 45%; max-width: 500px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
             </div>
+            <div style="max-width: 720px; margin: 40px auto; text-align: left; font-size: 1.25rem; line-height: 1.7;">
+                <p><strong>Dojo Exaflop Compute Explained:</strong></p>
+                <p>Dojo is Tesla's in-house supercomputer designed specifically for training massive neural networks on vast amounts of video data from the Tesla fleet. It uses custom D1/AI5 chips optimized for sparse tensor operations and video workloads, achieving **1.1+ exaflops** of BF16 compute in a single ExaPOD configuration (120 trays with over 1 million cores).</p>
+                <p>An **exaflop** equals 1 quintillion (10^18) floating-point operations per second — roughly equivalent to millions of high-end GPUs working together. Dojo's architecture delivers this at high efficiency with massive memory bandwidth (1.2+ exabytes/second) and low-latency interconnects, allowing Tesla to train FSD and Optimus models 4x faster than traditional GPU clusters while using less power.</p>
+                <p>Dojo is critical for accelerating progress toward unsupervised autonomy and humanoid robotics.</p>
+            </div>
+            <a href="#" class="btn">Learn About Dojo</a>
         </div>
     </section>
 
     <footer>
-        <p>2005 Future Energy. Tesla-Inspired Website</p>
-        <p>This is affiliated with Tesla, Inc.</p>
+        <p>2005 Future Energy Tesla, Inc.</p>
     </footer>
 
     <script src="script.js"></script>
